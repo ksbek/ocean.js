@@ -14,7 +14,7 @@
   "scripts": {
     "start": "npm run clean && npm run build:metadata && tsc -w",
     "build": "npm run clean && npm run build:metadata && microbundle build --format modern,esm,cjs,umd --compress --tsconfig tsconfig.json",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
     "build:tsc": "tsc --sourceMap",
     "build:metadata": "node ./scripts/get-metadata.js > src/metadata.json",
     "clean": "rm -rf ./dist/ ./doc/ ./.nyc_output",
