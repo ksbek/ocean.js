@@ -270,7 +270,26 @@ export class ConfigHelper {
 
     let addresses
     try {
-      addresses = JSON.parse(process.env.ADDRESS_FILE)
+      addresses = {
+        "base": {
+          "chainId": 8453,
+          "OPFCommunityFeeCollector": "0x2720d405ef7cDC8a2E2e5AeBC8883C99611d893C",
+          "startBlock": 32860038,
+          "Router": "0xEF62FB495266C72a5212A11Dce8baa79Ec0ABeB1",
+          "FixedPrice": "0xc37F8341Ac6e4a94538302bCd4d49Cf0852D30C0",
+          "ERC20Template": {
+            "1": "0x3c21a90599b5B7f37014cA5Bf30d3f1b73d7e391",
+            "2": "0xCfDdA22C9837aE76E0faA845354f33C62E03653a"
+          },
+          "ERC721Template": {
+            "1": "0x4E6058dC00e90C0DCA47A5d0D3346F409939A5ab"
+          },
+          "Dispenser": "0xE9397625Df9B63f0C152f975234b7988b54710B8",
+          "ERC721Factory": "0x159924ca0F47D6F704B97E29099b89e518A17B5E",
+          "BatchPayments": "0xFe7967A5176fDAFa8DE109b3507016B885a82D6e",
+          "Ocean": "0xE0D61FfA583418E96ebD53EEb28B5900C1ea013C"
+        }
+      }
     } catch (e) {
       addresses = null
     }
